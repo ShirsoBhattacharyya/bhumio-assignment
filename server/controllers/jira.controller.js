@@ -40,7 +40,7 @@ const getJira = async (req, res) => {
       totalTasks: assignedResponse?.data?.total + unassignedTasks,
     });
   } catch (error) {
-    res.status(500).send("Internal Server Error");
+    res.status(500).send(error.message);
   }
 };
 

@@ -14,12 +14,11 @@ const JiraDashboard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/api/jira");
+        const response = await axios.get("https://olive-xerus-tutu.cyclic.app/api/jira");
         setData(response.data);
         setLoading(false);
       } catch (error) {
         console.error(error);
-        setLoading(false);
       }
     };
     fetchData();
